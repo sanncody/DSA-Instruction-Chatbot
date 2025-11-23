@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA Instructor AI</title>
+    <!-- Markdown Parser for code blocks -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <span>&lt;/&gt;</span> DSA Instructor
+        </div>
+        <div class="api-input-container">
+            <input type="password" id="api-key-input" placeholder="Paste Gemini API Key Here">
+        </div>
+    </header>
+
+    <div id="chat-container">
+        <!-- Welcome Message -->
+        <div class="message ai">
+            <div class="sender-name">DSA Instructor</div>
+            <div class="msg-bubble">
+                Hello. I am your Data Structure and Algorithm Instructor. Ask me a problem, and I will explain it
+                simply. Do not waste my time with irrelevant topics.
+            </div>
+        </div>
+    </div>
+
+    <div class="input-area">
+        <textarea id="user-input" placeholder="Ask a DSA question (e.g., 'Explain Binary Search')..."
+            oninput="autoResize(this)"></textarea>
+        <button id="send-btn" onclick="handleSend()">Send</button>
+    </div>
+
+    <script src="dsa.js"></script>
+</body>
+
+</html>
